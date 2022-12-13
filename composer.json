@@ -1,0 +1,45 @@
+{
+  "name": "edgar-orozco/docsigner",
+  "description": "Firma digital y autógrafa digital",
+  "keywords": ["Laravel"],
+  "authors": [
+    {
+      "name": "Edgar Orozco",
+      "email": "eorozco@lxl.mx"
+    }
+  ],
+  "homepage": "https://github.com/edgar-orozco/docsigner",
+  "require": {
+    "php": "^7.4",
+    "laravel/framework": "^6.0",
+    "phpcfdi/credentials": "^1.1"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^4.0"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "EdgarOrozco\\Docsigner\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "EdgarOrozco\\Docsigner\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "EdgarOrozco\\Docsigner\\Providers\\DocsignerServiceProvider"
+      ],
+      "aliases": {
+        "Docsigner": "EdgarOrozco\\Docsigner\\Providers\\Facades\\Docsigner"
+      }
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit -c ./phpunit.xml --colors=always",
+    "analysis": "vendor/bin/phpstan analyse"
+  }
+}
